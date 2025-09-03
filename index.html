@@ -496,20 +496,4 @@ if (typeof window !== "undefined") {
     
     <!-- End of bodyEnd -->
 
-<script>
-  (function () {
-    const kill = () => {
-      document.getElementById('__framer-badge-container')?.remove();
-      document.getElementById('__framer-editorbar')?.remove();
-      document.getElementById('__framer-editorbar-container')?.remove();
-    };
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', kill);
-    } else {
-      kill();
-    }
-    new MutationObserver(kill).observe(document.documentElement, { childList: true, subtree: true });
-  })();
-</script>
-
 </body></html>
